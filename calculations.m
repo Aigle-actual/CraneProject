@@ -32,3 +32,10 @@ alDensity = 0098; %lb/in^3
 beamArea = (insert_area); %inches^2
 beamVolume = beamLength*beamArea; %inches^3
 beamWeight = beamVolume*beamDensity; %lb
+
+A=?
+V=80*12*A
+W = V*.284
+Wo=W/80
+x=?
+V=-Wo(x)^1 -(2000+100000*cableSF)/2 *(x-78.5)^0
