@@ -27,18 +27,19 @@ TorsionalShearStressDrum = (cableTension* cableSF * (minDrumOD/2))/J
 
 beamLength = 80*12; %inches
 stDensity = 0.284; %lb/in^3
-alDensity = 0098; %lb/in^3
+alDensity = 0.098; %lb/in^3
 
-beamArea = (insert_area); %inches^2
+beamArea = 256; %inches^2
 beamVolume = beamLength*beamArea; %inches^3
+beamDensity = stDensity;
 beamWeight = beamVolume*beamDensity; %lb
-beamMOI = (insert_MOI);
-beamE = (insert_moduluselasticity);
+beamMOI = 54261.3;
+beamE = 30000000;
 
-distributedWeight=beamWeight/beamLength
+distributedWeight=(beamWeight*1.2)/beamLength
 syms x
 ShearForce=-distributedWeight*(x)^1 -(2000+100000*cableSF)/2 *(x-942)^0
 
 beamSag = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-2000*beamLength^3)/(48*beamE*beamMOI)
-beamVerticalDeflection = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-202000*beamLength^3)/(48*beamE*beamMOI)
-beamSlope = (-1*distributedWeight*beamLength^3)/(24*beamE*beamMOI)+(-202000*beamLength^2)/(16*beamE*beamMOI)
+beamVerticalDeflection = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-102000*beamLength^3)/(48*beamE*beamMOI)
+beamSlope = (-1*distributedWeight*beamLength^3)/(24*beamE*beamMOI)+(-102000*beamLength^2)/(16*beamE*beamMOI)
