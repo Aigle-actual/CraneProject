@@ -20,7 +20,7 @@ motorRPM = motorHP * 63024 / (minDrumOD*.5*cableTension)
 
 cableSpeed = minDrumOD*pi*motorRPM/60 %in/sec
 
-liftTime = liftHeight/cableSpeed %seconds
+liftTime = pulleyRatio * liftHeight/cableSpeed %seconds
 
 J = (pi/32) * minDrumOD^4
 TorsionalShearStress = (cableTension* cableSF * (minDrumOD/2))/J
