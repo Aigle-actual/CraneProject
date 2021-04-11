@@ -24,3 +24,11 @@ liftTime = pulleyRatio * liftHeight/cableSpeed %seconds
 
 J = (pi/32) * minDrumOD^4
 TorsionalShearStress = (cableTension* cableSF * (minDrumOD/2))/J
+
+beamLength = 80*12; %inches
+stDensity = 0.284; %lb/in^3
+alDensity = 0098; %lb/in^3
+
+beamArea = (insert_area); %inches^2
+beamVolume = beamLength*beamArea; %inches^3
+beamWeight = beamVolume*beamDensity; %lb
