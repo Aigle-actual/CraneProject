@@ -29,10 +29,10 @@ beamLength = 80*12; %inches
 stDensity = 0.284; %lb/in^3
 alDensity = 0.098; %lb/in^3
 
-beamWidth= 12; %inches
-beamFlange = 1.02; %inches
-beamHeight = 36.01; %inches
-beamWeb = .65; %inches
+beamWidth= 26; %inches
+beamFlange = 3; %inches
+beamHeight = 38; %inches
+beamWeb = 3; %inches
 b= beamHeight/2
 Q = ((beamHeight-2*beamFlange)/2)*(beamWeb)*(((beamHeight-2*beamFlange)/2)/2)+beamFlange*beamWidth*(beamHeight/2-beamFlange/2)
 beamArea = (beamWidth*beamHeight)-(2*((beamHeight - 2*beamFlange)*(beamWidth/2-beamWeb/2))); %inches^2
