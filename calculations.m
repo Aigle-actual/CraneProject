@@ -43,7 +43,7 @@ beamMOI = (1/12)*((beamWidth*beamHeight^3)-(beamWidth-beamWeb)*(beamHeight-(2*be
 beamE = 30000000;
 
 distributedWeight=(beamWeight*1.2)/beamLength
-x = 80
+x = 80*12
 shearForce=-distributedWeight*(x)^1 -(1000+50000*cableSF)/2 *(x-942)^0
 shearStress = (shearForce * Q)/(beamMOI * b)
 
