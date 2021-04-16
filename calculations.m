@@ -44,7 +44,7 @@ beamE = 30000000;
 
 distributedWeight=(beamWeight*1.2)/beamLength
 x = 80*12 %inches
-shearForce=-distributedWeight*(x)^1 -(1000+50000*cableSF)/2 *(x-942)^0
+shearForce=((1000+50000*cableSF)/2)-distributedWeight*(x)^1 -(1000+50000*cableSF)*(x-942)^0
 shearStress = (shearForce * Q)/(beamMOI * b)
 
 beamSag = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-1000*beamLength^3)/(48*beamE*beamMOI)
