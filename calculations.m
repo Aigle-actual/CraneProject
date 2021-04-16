@@ -45,7 +45,7 @@ beamE = 30000000;
 distributedWeight=(beamWeight*1.2)/beamLength
 x = 80*12 %inches
 reactionForce = (((1.5)*(12)*(50000+1000)+(40)*(12)*(distributedWeight))/(80*12))
-shearForce=reactionForce-distributedWeight*(x)^1 -(1000+50000*cableSF)*(x-942)^0
+shearForce=reactionForce-distributedWeight*(x)^1 -(1000+50000)*(x-942)^0
 shearStress = (shearForce * Q)/(beamMOI * b)
 
 moment = reactionForce*x-(distributedWeight/2)*(x)^2-(1000+50000)*(x-942)
