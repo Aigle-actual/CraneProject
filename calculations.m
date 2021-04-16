@@ -55,3 +55,4 @@ momentStress = moment/z
 beamSag = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-1000*beamLength^3)/(48*beamE*beamMOI)
 beamVerticalDeflection = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-51000*beamLength^3)/(48*beamE*beamMOI)
 beamSlope = (-1*distributedWeight*beamLength^3)/(24*beamE*beamMOI)+(-51000*beamLength^2)/(16*beamE*beamMOI)
+additionalDeflection = beamVerticalDeflection-beamSag
