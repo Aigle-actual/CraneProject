@@ -44,8 +44,13 @@ beamE = 30000000;
 
 distributedWeight=(beamWeight*1.2)/beamLength
 x = 80*12 %inches
-shearForce=((1000+50000*cableSF)/2)-distributedWeight*(x)^1 -(1000+50000*cableSF)*(x-942)^0
+reactionForce = (((1.5)(12)(50000+1000)+(40)(12)(distributedWeight))/(80*12))
+shearForce=reactionForce-distributedWeight*(x)^1 -(1000+50000*cableSF)*(x-942)^0
 shearStress = (shearForce * Q)/(beamMOI * b)
+
+moment = reactionForce*x-(distributedWeight/2)*(x)^2-(1000+50000)*(x-942)
+z = beamMOI/(beamHeight/2)
+momentStress = moment/z
 
 beamSag = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-1000*beamLength^3)/(48*beamE*beamMOI)
 beamVerticalDeflection = (-5*(distributedWeight)*beamLength^4)/(384*beamE*beamMOI)+(-51000*beamLength^3)/(48*beamE*beamMOI)
